@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter Navigation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #ffd6e7 0%, #c2e9fb 100%);
+            color: #5a5a5a;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 850px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 24px;
+            box-shadow: 
+                0 15px 35px rgba(0, 0, 0, 0.1),
+                0 3px 10px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #ff9bc9 0%, #93d9ff 100%);
+            color: white;
+            padding: 35px 25px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.1"><circle cx="20" cy="20" r="3" fill="white"/><circle cx="50" cy="30" r="2" fill="white"/><circle cx="80" cy="20" r="4" fill="white"/><circle cx="30" cy="70" r="3" fill="white"/><circle cx="70" cy="80" r="2" fill="white"/></svg>');
+        }
+        
+        h1 {
+            font-size: 2.4rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .subtitle {
+            font-size: 1.15rem;
+            opacity: 0.95;
+            font-weight: 400;
+            position: relative;
+        }
+        
+        .chapters-container {
+            padding: 35px 30px;
+        }
+        
+        .chapters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+        }
+        
+        .chapter-card {
+            background: linear-gradient(145deg, #ffffff, #f5f9ff);
+            border-radius: 18px;
+            padding: 25px 20px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            border: 2px solid transparent;
+            text-decoration: none;
+            color: #5a5a5a;
+            display: block;
+            box-shadow: 
+                0 4px 15px rgba(0, 0, 0, 0.05),
+                0 1px 3px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .chapter-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, #ff9bc9, #93d9ff);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .chapter-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 
+                0 12px 25px rgba(0, 0, 0, 0.12),
+                0 5px 10px rgba(0, 0, 0, 0.08);
+            border-color: #ffb3d9;
+            background: linear-gradient(145deg, #ffffff, #f0f7ff);
+        }
+        
+        .chapter-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .chapter-number {
+            font-size: 1.9rem;
+            font-weight: 800;
+            color: #ff6bab;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .chapter-name {
+            font-size: 0.95rem;
+            color: #6a6a6a;
+            line-height: 1.4;
+            font-weight: 500;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: linear-gradient(to right, #f8f9ff, #f0f5ff);
+            color: #888;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        @media (max-width: 768px) {
+            .chapters-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .chapters-container {
+                padding: 25px 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .chapters-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            body {
+                padding: 15px;
+            }
+        }
+        
+        /* Animation for cards */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .chapter-card {
+            animation: fadeInUp 0.5s ease forwards;
+            opacity: 0;
+        }
+        
+        .chapter-card:nth-child(1) { animation-delay: 0.1s; }
+        .chapter-card:nth-child(2) { animation-delay: 0.2s; }
+        .chapter-card:nth-child(3) { animation-delay: 0.3s; }
+        .chapter-card:nth-child(4) { animation-delay: 0.4s; }
+        .chapter-card:nth-child(5) { animation-delay: 0.5s; }
+        .chapter-card:nth-child(6) { animation-delay: 0.6s; }
+        .chapter-card:nth-child(7) { animation-delay: 0.7s; }
+        .chapter-card:nth-child(8) { animation-delay: 0.8s; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>All Chapters</h1>
+            <p class="subtitle">Click on any chapter to open</p>
+        </header>
+        
+<div class="chapters-container">
+    <div class="chapters-grid">
+        <a href="c1.html" class="chapter-card">
+            <div class="chapter-number">C1</div>
+            <div class="chapter-name">The Multidisciplinary Nature of Environmental Studies</div>
+        </a>
+        
+        <a href="c2.html" class="chapter-card">
+            <div class="chapter-number">C2</div>
+            <div class="chapter-name">Natural Resources</div>
+        </a>
+        
+        <a href="c3.html" class="chapter-card">
+            <div class="chapter-number">C3</div>
+            <div class="chapter-name">Ecosystems</div>
+        </a>
+        
+        <a href="c4.html" class="chapter-card">
+            <div class="chapter-number">C4</div>
+            <div class="chapter-name">Biodiversity</div>
+        </a>
+        
+        <a href="c5.html" class="chapter-card">
+            <div class="chapter-number">C5</div>
+            <div class="chapter-name">Pollution</div>
+        </a>
+        
+        <a href="c6.html" class="chapter-card">
+            <div class="chapter-number">C6</div>
+            <div class="chapter-name">Social Issues and The Environment</div>
+        </a>
+        
+        <a href="c7.html" class="chapter-card">
+            <div class="chapter-number">C7</div>
+            <div class="chapter-name">Human Population and the Environment</div>
+        </a>
+        
+        <a href="c8.html" class="chapter-card">
+            <div class="chapter-number">C8</div>
+            <div class="chapter-name">Field Work</div>
+        </a>
+    </div>
+</div>
+        
+        <footer>
+            <p>Chapter Navigation &copy; 2025</p>
+        </footer>
+    </div>
+</body>
+</html>
