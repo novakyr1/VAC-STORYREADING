@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEC Exam Questions - PowerPoint</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 0px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2.2rem;
+        }
+        
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        
+        .weightage-table {
+            width: 100%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+        
+        .weightage-table th, .weightage-table td {
+            padding: 14px 20px;
+            text-align: left;
+            border-bottom: 1px solid #eaeaea;
+        }
+        
+        .weightage-table th {
+            background-color: #3498db;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .weightage-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .weightage-table tr:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .marks-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-right: 8px;
+        }
+        
+        .badge-1 { background: #e8f5e9; color: #2e7d32; }
+        .badge-5 { background: #e3f2fd; color: #1565c0; }
+        .badge-10 { background: #fff3e0; color: #ef6c00; }
+        
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .nav-tab {
+            padding: 12px 24px;
+            background: white;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-tab:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .nav-tab.active {
+            background: #3498db;
+            color: white;
+        }
+        
+        .questions-container {
+            display: none;
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+        
+        .questions-container.active {
+            display: block;
+        }
+        
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+            font-size: 1.5rem;
+        }
+        
+        .question-block {
+            margin-bottom: 25px;
+            padding: 20px;
+            border-radius: 8px;
+            background: #f8f9fa;
+            transition: all 0.3s ease;
+        }
+        
+        .question-block:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .question {
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #2c3e50;
+            font-size: 1.1rem;
+        }
+        
+        .answer {
+            color: #555;
+            padding-left: 15px;
+            border-left: 3px solid #3498db;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .weightage-table {
+                font-size: 0.9rem;
+            }
+            
+            .weightage-table th, .weightage-table td {
+                padding: 10px 12px;
+            }
+            
+            .nav-tab {
+                padding: 10px 16px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SEC PowerPoint Exam Questions</h1>
+            <p class="subtitle">Organized by mark weightage for efficient exam preparation</p>
+            
+            <table class="weightage-table">
+                <thead>
+                    <tr>
+                        <th>Chapter/Topic</th>
+                        <th>Marks Weight</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Animation & Transitions</td>
+                        <td>~15-20 marks</td>
+                    </tr>
+                    <tr>
+                        <td>Content Insertion (Text, Images, Tables)</td>
+                        <td>~10-15 marks</td>
+                    </tr>
+                    <tr>
+                        <td>Slide Master, Handouts, Views</td>
+                        <td>~10 marks</td>
+                    </tr>
+                    <tr>
+                        <td>Basics & Presentation Delivery</td>
+                        <td>~5 marks</td>
+                    </tr>
+                </tbody>
+            </table>
+        </header>
+        
+        <div class="nav-tabs">
+            <div class="nav-tab active" data-target="1-mark">1 Mark Questions</div>
+            <div class="nav-tab" data-target="5-mark">5 Mark Questions</div>
+            <div class="nav-tab" data-target="10-mark">10 Mark Questions</div>
+        </div>
+        
+        <!-- 1 Mark Questions -->
+        <div class="questions-container active" id="1-mark">
+            <h2 class="section-title">1 Mark Questions</h2>
+            
+            <div class="question-block">
+                <div class="question"><span class="marks-badge badge-1">1 Mark</span> What is the difference between "With Previous" and "After Previous" in animation timing?</div>
+                <div class="answer">"With Previous" starts the animation at the same time as the previous animation, while "After Previous" starts the animation after the previous animation has completed.</div>
+            </div>
+            
+            <div class="question-block">
+                <div class="question"><span class="marks-badge badge-1">1 Mark</span> What is the purpose of the "Selection Pane" in PowerPoint?</div>
+                <div class="answer">The Selection Pane allows you to view and manage all objects on a slide, making it easier to select, rename, show, or hide objects, especially when they are layered or overlapping.</div>
+            </div>
+            
+            <div class="question-block">
+                <div class="question"><span class="marks-badge badge-1">1 Mark</span> What is the difference between a theme and a template in PowerPoint?</div>
+                <div class="answer">A theme is a set of design elements (colors, fonts, effects) that can be applied to a presentation. A template is a pre-designed presentation file (.potx) that contains themes, sample content, and layouts that can be used as a starting point for new presentations.</div>
+            </div>
+            
+            <div class="question-block">
+                <div class="question"><span class="marks-badge badge-1">1 Mark</span> What is the benefit of using the "Format Painter" tool?</div>
+                <div class="answer">The Format Painter allows you to quickly copy formatting from one object and apply it to another, saving time and ensuring consistency in your presentation's appearance.</div>
+            </div>
+            
+            <div class="question-block">
+                <div class="question"><span class="marks-badge badge-1">1 Mark</span> What is the purpose of the "Align" tool in PowerPoint?</div>
+                <div class="answer">The Align tool helps you precisely position objects on a slide by aligning them to each other or to the slide itself (left, center, right, top, middle, bottom, or distribute evenly).</div>
+            </div>
+            
+            <div class="question-block">
+                <div class="question"><span class="marks-badge badge-1">1 Mark</span> What is the purpose of the "Hide Slide" feature and how is it used?</div>
+                <div class="answer">Hide Slide allows you to exclude specific slides from the presentation without deleting them. Right-click a slide in the thumbnail pane and select "Hide Slide" to toggle this setting.</div>
+            </div>
+            
+            <div class="question-block">
+                <div class="question"><span class="marks-badge badge-1">1 Mark</span> What is the "Presenter View" and what information does it display?</div>
+                <div class="answer">Presenter View is a special presentation mode that shows the current slide, next slide, speaker notes, and presentation timer to the presenter, while the audience sees only the current slide.</div>
+            </div>
+            
+            <div class="question-block">
+                <div class="question"><span class="marks-badge badge-1">1 Mark</span> What is the "Morph" transition and what are its requirements?</div>
+                <div class="answer">Morph is a transition that creates smooth animation between slides by morphing similar objects. It requires PowerPoint 2019/365 and objects with the same name on consecutive slides.</div>
+            </div>
+            
+            <div class="question-block">
+                <div class="question"><span class="marks-badge badge-1">1 Mark</span> What is the difference between "Embed" and "Link" when inserting media files?</div>
+                <div class="answer">Embedding stores the media file within the presentation (increasing file size), while linking creates a reference to an external file (keeping presentation size smaller but requiring the link to remain intact).</div>
+            </div>
+            
+            <div class="question-block">
+                <div class="question"><span class="marks-badge badge-1">1 Mark</span> What is the purpose of the "Format Background" options?</div>
+                <div class="answer">Format Background allows you to customize slide backgrounds with solid colors, gradients, pictures, or textures, and apply artistic effects to create visually appealing slides.</div>
+            </div>
+        </div>
+        
+        <!-- 5 Mark Questions -->
+        <div class="questions-container" id="5-mark">
+            <h2 class="section-title">5 Mark Questions</h2>
+            
+            <div class="question-block">
+                <div class="question"><span class="marks-badge badge-5">5 Marks</span> How can you create a custom motion path for an object?</div>
+                <div class="answer">Select the object, go to Animations tab, click "Add Animation", choose "Motion Paths", and then select "Custom Path". You can then draw your desired path on the slide.</div>
+            </div>
+            
+            <div class="question-block">
+                <div class="question"><span class="marks-badge badge-5">5 Marks</span> How do you create a hyperlink within a presentation?</div>
+                <div class="answer">Select the text or object you want to hyperlink, right-click and choose "Hyperlink", then select "Place in This Document" and choose the specific slide you want to link to.</div>
+            </div>
+            
+            <div class="question-block">
+                <div class="question"><span class="marks-badge badge-5">5 Marks</span> How can you add a video to your presentation and control its playback?</div>
+                <div class="answer">Use Insert > Video to add a video. Then use the Video Tools Playback tab to set options like Start (On Click or Automatically), trimming, fade in/out, and volume controls.</div>
+            </div>
+            
+            <div class="question-block">
+                <div class="question"><span class="marks-badge badge-5">5 Marks</span> How can you add speaker notes to your presentation?</div>
+                <div class="answer">Click in the notes pane below each slide in Normal view, or go to View > Notes Page for a larger view where you can add and format speaker notes.</div>
+            </div>
+            
+            <div class="question-block">
+                <div class="question"><span class="marks-badge badge-5">5 Marks</span> What is the purpose of the "Animation Painter" and how is it used?</div>
+                <div class="answer">The Animation Painter copies animation effects from one object to another. Select the object with the desired animation, click Animation Painter in the Animations tab, then click the target object to apply the same animation.</div>
+            </div>
+            
+            <div class="question-block">
+                <div class="question"><span class="marks-badge badge-5">5 Marks</span> How can you create a looping animation that repeats continuously?</div>
+                <div class="answer">Select the animated object, go to the Animations tab, click Animation Pane, right-click the animation effect, choose Effect Options, go to the Timing tab, and set "Repeat" to "Until End of Slide" or a specific number of times.</div>
+            </div>
+            
+            <div class="question-block">
+                <div class="question"><span class="marks-badge badge-5">5 Marks</span> How do you create a custom theme in PowerPoint?</div>
+                <div class="answer">Go to Design tab, expand the Themes gallery, and select "Save Current Theme". This saves your custom colors, fonts, and effects as a reusable theme file.</div>
+            </div>
+            
+            <div class="question-block">
+                <div class="question"><span class="marks-badge badge-5">5 Marks</span> How can you add a footer with slide numbers to all slides?</div>
+                <div class="answer">Go to Insert > Header & Footer, check the "Slide number" and "Footer" boxes, enter footer text if desired, and click "Apply to All" to add them to every slide.</div>
+            </div>
+            
+            <div class="question-block">
+                <div class="question"><span class="marks-badge badge-5">5 Marks</span> How can you rehearse and set slide timings for an automatic presentation?</div>
+                <div class="answer">Go to Slide Show > Rehearse Timings to practice your presentation. PowerPoint will record the time spent on each slide, which can be used for automatic slide advancement.</div>
+            </div>
+            
+            <div class="question-block">
+                <div class="question"><span class="marks-badge badge-5">5 Marks</span> How do you create a custom chart template in PowerPoint?</div>
+                <div class="answer">Create and format a chart as desired, right-click the chart, select "Save as Template", give it a name, and it will be available in the Chart Type dialog for future use.</div>
+            </div>
+        </div>
+        
+        <!-- 10 Mark Questions -->
+        <div class="questions-container" id="10-mark">
+            <h2 class="section-title">10 Mark Questions</h2>
+            
+            <div class="question-block">
+                <div class="question"><span class="marks-badge badge-10">10 Marks</span> How can you create a custom slide layout in Slide Master?</div>
+                <div class="answer">In Slide Master view, click "Insert Layout" to create a new custom layout. Then use the "Insert Placeholder" option to add content placeholders for text, pictures, charts, etc., as needed.</div>
+            </div>
+            
+            <div class="question-block">
+                <div class="question"><span class="marks-badge badge-10">10 Marks</span> How do you apply a different transition effect to each slide in a presentation?</div>
+                <div class="answer">Select each slide individually in the slide thumbnail pane, go to the Transitions tab, and choose a different transition effect for each selected slide.</div>
+            </div>
+            
+            <div class="question-block">
+                <div class="question"><span class="marks-badge badge-10">10 Marks</span> How do you insert and format a SmartArt graphic in PowerPoint?</div>
+                <div class="answer">Go to Insert > SmartArt, choose a category and layout, then add text in the text pane. Use SmartArt Design and Format tabs to change colors, styles, and formatting of the graphic elements.</div>
+            </div>
+            
+            <div class="question-block">
+                <div class="question"><span class="marks-badge badge-10">10 Marks</span> What is the difference between "Save As" and "Save a Copy" in PowerPoint?</div>
+                <div class="answer">"Save As" creates a new file and makes it the active presentation, while "Save a Copy" creates a duplicate file but keeps the original presentation open and active.</div>
+            </div>
+            
+            <div class="question-block">
+                <div class="question"><span class="marks-badge badge-10">10 Marks</span> How can you change the background of all slides at once?</div>
+                <div class="answer">Go to View > Slide Master, select the top master slide, right-click and choose Format Background, make your changes, and they will apply to all slides based on that master.</div>
+            </div>
+            
+            <div class="question-block">
+                <div class="question"><span class="marks-badge badge-10">10 Marks</span> How do you create a summary or agenda slide in PowerPoint?</div>
+                <div class="answer">In Slide Sorter view, select the slides you want to include in the summary, then go to Home > Slides > Section > Zoom Summary to create an interactive agenda slide.</div>
+            </div>
+            
+            <div class="question-block">
+                <div class="question"><span class="marks-badge badge-10">10 Marks</span> What is the "Selection Pane" and how does it help in managing objects?</div>
+                <div class="answer">The Selection Pane (Home > Select > Selection Pane) lists all objects on a slide, allowing you to select, rename, show, hide, or reorder them, which is especially useful when objects overlap.</div>
+            </div>
+            
+            <div class="question-block">
+                <div class="question"><span class="marks-badge badge-10">10 Marks</span> How can you create a photo album presentation in PowerPoint?</div>
+                <div class="answer">Go to Insert > Photo Album > New Photo Album, add pictures, adjust layout and formatting options, then click Create to generate a presentation with your selected photos.</div>
+            </div>
+            
+            <div class="question-block">
+                <div class="question"><span class="marks-badge badge-10">10 Marks</span> What are the different options for printing handouts in PowerPoint?</div>
+                <div class="answer">In Print settings, under Settings, choose "Handouts" and select how many slides per page (1, 2, 3, 4, 6, or 9), and whether to include slide frames, print comments, or arrange slides horizontally or vertically.</div>
+            </div>
+        </div>
+
+
+
+<h2>GROUP-A</h2>
+
+<p><strong>(Answer any five)</strong></p>
+
+<h2>A. What is a slide?</h2>
+
+<p>A slide is a single page of a presentation created using software like Microsoft PowerPoint. A presentation is composed of a series of slides, which can contain text, images, charts, graphs, videos, and other multimedia elements to convey information to an audience.</p>
+
+<h2>B. Give an example of any four types of animations.</h2>
+
+<p>The four main types of animations in PowerPoint are:</p>
+<p>1. <strong>Entrance:</strong> Animations that bring an object onto the slide. (e.g., <em>Fade, Fly In, Zoom</em>)</p>
+<p>2. <strong>Emphasis:</strong> Animations that highlight or draw attention to an object already on the slide. (e.g., <em>Spin, Pulse, Grow/Shrink</em>)</p>
+<p>3. <strong>Exit:</strong> Animations that make an object leave the slide. (e.g., <em>Fade, Fly Out, Disappear</em>)</p>
+<p>4. <strong>Motion Paths:</strong> Animations that make an object move along a specified path. (e.g., <em>Lines, Arcs, Loops, Custom Path</em>)</p>
+
+<h2>C. Define SmartArt graphics.</h2>
+
+<p>SmartArt graphics are pre-designed visual representations of information in PowerPoint. They allow users to create professional-looking diagrams, such as organizational charts, process flows, cycles, or hierarchies, quickly and easily by converting bulleted lists into visual diagrams.</p>
+
+<h2>D. State different types of numbering in PowerPoints.</h2>
+
+<p>The different types of numbering in PowerPoint include:</p>
+<p>1. <strong>Decimal Numbers:</strong> 1., 2., 3., ...</p>
+<p>2. <strong>Roman Numerals:</strong> Uppercase (I., II., III., ...) or Lowercase (i., ii., iii., ...)</p>
+<p>3. <strong>Alphabetical:</strong> Uppercase Letters (A., B., C., ...) or Lowercase Letters (a., b., c., ...)</p>
+<p>4. <strong>Custom Numbering:</strong> Using different formats like 1), A), etc.</p>
+
+<h2>E. How to present a slide show?</h2>
+
+<p>To present a slideshow in PowerPoint:</p>
+<p>1. Click on the <strong>"Slide Show"</strong> tab on the ribbon.</p>
+<p>2. To start from the beginning, click <strong>"From Beginning"</strong> or press the <strong>F5</strong> key.</p>
+<p>3. To start from the current slide, click <strong>"From Current Slide"</strong> or press <strong>Shift + F5</strong>.</p>
+<p>4. Use the <strong>Spacebar</strong>, <strong>Enter</strong>, or <strong>Right Arrow</strong> key to move to the next slide.</p>
+<p>5. Press the <strong>Esc</strong> key to end the slideshow.</p>
+
+<h2>F. State about various views of PowerPoint.</h2>
+
+<p>The primary views in PowerPoint are:</p>
+<p>1. <strong>Normal View:</strong> The default editing view, showing a slide pane, thumbnail pane, and notes pane.</p>
+<p>2. <strong>Slide Sorter View:</strong> Displays all slides as thumbnails, ideal for rearranging, adding, or deleting slides.</p>
+<p>3. <strong>Reading View:</strong> Presents the slideshow in a window, allowing you to see animations and transitions without going to full-screen mode.</p>
+<p>4. <strong>Slide Show View:</strong> The full-screen presentation view used to deliver the presentation to an audience.</p>
+<p>5. <strong>Notes Page View:</strong> Shows a page with the slide at the top and the speaker's notes below it.</p>
+
+<h2>G. How can you set custom timing for slide transition in PowerPoint presentation?</h2>
+
+<p>To set custom slide transition timing:</p>
+<p>1. Select the slide(s) you want to apply the timing to.</p>
+<p>2. Go to the <strong>"Transitions"</strong> tab.</p>
+<p>3. In the <strong>"Timing"</strong> group, uncheck <strong>"On Mouse Click"</strong>.</p>
+<p>4. Check the <strong>"After"</strong> checkbox and enter the desired time (e.g., 00:05.00 for 5 seconds) in the box provided.</p>
+<p>5. The slide will now advance automatically after the specified time.</p>
+
+<h2>H. Give an example of any two type of transition in PowerPoint presentation.</h2>
+
+<p>Two types of transitions are:</p>
+<p>1. <strong>Subtle:</strong> Smooth and gentle effects. (e.g., <em>Fade, Push, Wipe</em>)</p>
+<p>2. <strong>Dynamic:</strong> More dramatic and eye-catching effects. (e.g., <em>Orbit, Fly Through, Vortex</em>)</p>
+
+---
+
+<h2>GROUP-B</h2>
+
+<p><strong>(Answer any three)</strong></p>
+
+<h2>9. Write a short note on handouts.</h2>
+
+<p>Handouts are printed versions of a PowerPoint presentation that can be distributed to the audience. They help the audience follow along and take notes during the presentation and serve as a reference afterward.</p>
+<p><strong>Purpose:</strong> The main purpose is to provide a tangible takeaway for the audience, ensuring they remember the key points.</p>
+<p><strong>Layout Options:</strong> PowerPoint allows you to print handouts with 1, 2, 3, 4, 6, or 9 slides per page. The most common are 2 slides per page (saves paper) and 3 slides per page (provides lines for notes next to each slide).</p>
+<p><strong>Creation:</strong> To create handouts, go to <strong>File > Print</strong>. Under "Settings," click "Full Page Slides" and then select your desired layout from the "Handouts" section. You can also choose to print in Grayscale or Pure Black and White to save ink.</p>
+<p><strong>Header and Footer:</strong> You can add page numbers, the date, and custom text to the header or footer of the handout pages via the <strong>"Insert"</strong> tab.</p>
+
+<h2>10. Discuss about different bullets and numbering in PowerPoint.</h2>
+
+<p>Bullets and numbering are used to create lists in PowerPoint, making content more organized and readable.</p>
+<p><strong>Bullets:</strong> Used for unordered lists where the sequence of items is not important.</p>
+<p><strong>Types:</strong> Standard bullet points (•), arrows (→), checkmarks (✓), squares (■), and custom symbols or even images can be used as bullets.</p>
+<p><strong>Customization:</strong> You can change the bullet's symbol, color, and size by selecting the list, going to the <strong>"Home"</strong> tab, clicking the dropdown arrow next to the "Bullets" button, and selecting "Bullets and Numbering."</p>
+<p><strong>Numbering:</strong> Used for ordered lists where the sequence or steps are important.</p>
+<p><strong>Types:</strong> Decimal numbers (1., 2., 3.), uppercase/lowercase Roman numerals (I., II., i., ii.), and uppercase/lowercase letters (A., B., a., b.).</p>
+<p><strong>Customization:</strong> Similar to bullets, you can change the numbering format, start at a specific number, and change its color and size via the "Bullets and Numbering" dialog box.</p>
+<p><strong>Multilevel Lists:</strong> Both bullets and numbering can be indented to create sub-points or nested lists, providing a hierarchical structure to the information.</p>
+
+<h2>11. Write down the steps to add images in presentations.</h2>
+
+<p>To add images to a PowerPoint presentation:</p>
+<p>1. <strong>Select the Slide:</strong> Navigate to the slide where you want to insert the image.</p>
+<p>2. <strong>Insert Tab:</strong> Go to the <strong>"Insert"</strong> tab on the ribbon.</p>
+<p>3. <strong>Pictures Option:</strong> In the "Images" group, click on <strong>"Pictures"</strong>.</p>
+<p>4. <strong>Choose Source:</strong></p>
+<p>   · <strong>This Device:</strong> To insert an image stored on your computer. A dialog box will open; browse to the image file, select it, and click <strong>"Insert"</strong>.</p>
+<p>   · <strong>Online Pictures:</strong> To insert an image from online sources like Bing Image Search or OneDrive.</p>
+<p>5. <strong>Adjust the Image:</strong> Once inserted, you can click and drag the image to reposition it. Use the corner handles to resize it proportionally.</p>
+<p>6. <strong>Format the Image (Optional):</strong> Select the image to activate the <strong>"Picture Format"</strong> tab. Here you can apply corrections, artistic filters, add borders (picture styles), crop the image, and adjust its brightness/contrast.</p>
+
+<h2>12. Discuss how to insert text in presentation and format it.</h2>
+
+<p><strong>Inserting Text:</strong></p>
+<p>Text is primarily added using <strong>Text Boxes</strong> and <strong>Placeholders</strong>.</p>
+<p>1. <strong>Placeholders:</strong> When you create a new slide (like a Title and Content slide), click inside the placeholder that says "Click to add text" and start typing.</p>
+<p>2. <strong>Text Boxes:</strong> For freeform text anywhere on the slide, go to the <strong>"Insert"</strong> tab, click <strong>"Text Box"</strong>, then click and drag on the slide to create a box, and type your text.</p>
+<p><strong>Formatting Text:</strong></p>
+<p>After selecting the text, use the tools in the <strong>"Home"</strong> tab:</p>
+<p>· <strong>Font:</strong> Change the font type (e.g., Arial, Calibri), size, and color.</p>
+<p>· <strong>Emphasis:</strong> Make text <strong>Bold</strong>, <em>Italic</em>, or <u>Underlined</u>.</p>
+<p>· <strong>Alignment:</strong> Align text to the left, center, right, or justify it.</p>
+<p>· <strong>Spacing:</strong> Adjust line spacing and character spacing.</p>
+<p>· <strong>Bullets/Numbering:</strong> Add bullet points or numbering to lists.</p>
+<p>· <strong>WordArt Styles:</strong> Apply pre-designed text effects from the <strong>"Format"</strong> tab under "Drawing Tools" for more dramatic styling.</p>
+
+<h2>13. How can we add tables in PowerPoint presentation?</h2>
+
+<p>To add a table in PowerPoint:</p>
+<p>1. <strong>Select the Slide:</strong> Go to the slide where you want the table.</p>
+<p>2. <strong>Insert Tab:</strong> Click on the <strong>"Insert"</strong> tab.</p>
+<p>3. <strong>Table Option:</strong> Click on the <strong>"Table"</strong> button.</p>
+<p>4. <strong>Choose Method:</strong></p>
+<p>   · <strong>Grid Method:</strong> Hover over the grid to select the number of rows and columns (e.g., 4x5), then click to insert.</p>
+<p>   · <strong>Insert Table:</strong> Click "Insert Table..." and manually enter the number of columns and rows.</p>
+<p>   · <strong>Draw Table:</strong> Click "Draw Table" to draw the table boundaries and cell divisions manually with a pencil tool.</p>
+<p>5. <strong>Enter Data:</strong> Click inside a cell and type to add your data.</p>
+<p>6. <strong>Design the Table:</strong> Once the table is selected, the <strong>"Table Design"</strong> and <strong>"Layout"</strong> tabs appear. You can use these to apply table styles, change border colors, shade cells, and adjust cell alignment and size.</p>
+
+---
+
+<h2>GROUP-C</h2>
+
+<p><strong>(Answer any two)</strong></p>
+
+<h2>14. Explain about custom animation in PowerPoint and discuss about its various features.</h2>
+
+<p>Custom Animation is a powerful feature in PowerPoint that allows you to apply and control unique animation effects to individual elements on a slide (like text, images, shapes).</p>
+<p><strong>Steps to Apply Custom Animation:</strong></p>
+<p>1. Select the object you want to animate.</p>
+<p>2. Go to the <strong>"Animations"</strong> tab.</p>
+<p>3. Click on <strong>"Add Animation"</strong> and choose an effect from the Entrance, Emphasis, Exit, or Motion Path categories.</p>
+<p><strong>Key Features of Custom Animation (Managed in the Animation Pane):</strong></p>
+<p>· <strong>Effect Options:</strong> Allows you to specify the direction, shape, or sequence of the animation (e.g., fly in "From Bottom," spin "Clockwise").</p>
+<p>· <strong>Timing:</strong></p>
+<p>  · <strong>Start:</strong> Controls when the animation begins.</p>
+<p>    · <strong>On Click:</strong> Starts when you click the mouse.</p>
+<p>    · <strong>With Previous:</strong> Plays simultaneously with the previous animation.</p>
+<p>    · <strong>After Previous:</strong> Starts immediately after the previous animation finishes.</p>
+<p>  · <strong>Duration:</strong> How long the animation effect lasts (in seconds).</p>
+<p>  · <strong>Delay:</strong> Adds a pause before the animation starts.</p>
+<p>· <strong>Animation Pane:</strong> A panel that appears on the side, listing all animations on the current slide in the order they play. It allows you to select, reorder, modify, and remove animations easily.</p>
+<p>· <strong>Reordering:</strong> You can change the sequence of animations by dragging them up or down in the Animation Pane.</p>
+<p>· <strong>Triggers:</strong> Advanced feature that starts an animation only when you click on a specific object on the slide.</p>
+
+<h2>15. Write a short note on slide master.</h2>
+
+<p>The Slide Master is the top slide in a hierarchy of slides that stores design information—themes, layouts, colors, fonts, backgrounds, and placeholder positions—for a presentation.</p>
+<p>· <strong>Purpose:</strong> Its primary purpose is to ensure <strong>consistency</strong> across all slides. By making a change in the Slide Master (e.g., changing the font or adding a logo), that change is automatically applied to every slide that uses that layout, saving time and effort.</p>
+<p>· <strong>Access:</strong> To view the Slide Master, go to the <strong>"View"</strong> tab and click <strong>"Slide Master"</strong>.</p>
+<p>· <strong>Components:</strong></p>
+<p>  1. <strong>Slide Master:</strong> The top-most, larger thumbnail. Changes here affect <strong>all</strong> layout slides beneath it.</p>
+<p>  2. <strong>Layout Masters:</strong> The smaller thumbnails below the Slide Master. Each represents a different slide layout (e.g., Title Slide, Title and Content, Two Content). You can customize placeholders for each specific layout.</p>
+<p>· <strong>Common Uses:</strong></p>
+<p>  · Adding a company logo or watermark to every slide.</p>
+<p>  · Customizing the font style and color for all titles and content.</p>
+<p>  · Setting the default bullet style.</p>
+<p>  · Adjusting the size and position of text and content placeholders.</p>
+<p>· <strong>Exiting:</strong> To return to normal view, click <strong>"Close Master View"</strong> on the Slide Master tab.</p>
+
+<h2>16. Write down the steps to create a PowerPoint presentation. Presentation should contain three slides. First slide contains the name of the topic. Second slide contains a chart and a textbox and the third slide contains description of the topic.</h2>
+
+<p><strong>Steps to Create the Presentation:</strong></p>
+<p>1. <strong>Open PowerPoint:</strong> Launch Microsoft PowerPoint. A new blank presentation will open with a Title Slide layout.</p>
+<p>2. <strong>Slide 1: Title Slide</strong></p>
+<p>   · Click in the <strong>"Click to add title"</strong> placeholder and type the name of your topic, e.g., "The Future of Renewable Energy."</p>
+<p>   · Click in the <strong>"Click to add subtitle"</strong> placeholder and type your name or organization.</p>
+<p>3. <strong>Add Slide 2: Chart and Textbox</strong></p>
+<p>   · Go to the <strong>"Home"</strong> tab and click <strong>"New Slide"</strong>. Choose the <strong>"Title and Content"</strong> layout.</p>
+<p>   · Click in the title placeholder and type "Current Energy Usage."</p>
+<p>   · To add a chart: In the content area, click the <strong>"Insert Chart"</strong> icon. Select a chart type (e.g., Column Chart), and click OK. A sample Excel sheet will open; edit the data with your own, then close the Excel window.</p>
+<p>   · To add a textbox: Go to the <strong>"Insert"</strong> tab, click <strong>"Text Box"</strong>, then click below or next to the chart and type a caption or explanation, e.g., "Figure 1: Global energy consumption by source (2023)."</p>
+<p>4. <strong>Add Slide 3: Description</strong></p>
+<p>   · Go to the <strong>"Home"</strong> tab, click <strong>"New Slide"</strong>, and again choose <strong>"Title and Content"</strong> or <strong>"Blank"</strong> layout.</p>
+<p>   · Add a title, e.g., "Detailed Description."</p>
+<p>   · Click in the content placeholder (or insert a text box) and type a detailed description of your topic. You can use bullet points for better readability.</p>
+<p>5. <strong>Apply Design (Optional):</strong> Go to the <strong>"Design"</strong> tab and select a theme to apply a consistent color and font scheme to all slides.</p>
+<p>6. <strong>Save the Presentation:</strong> Go to <strong>File > Save As</strong>, choose a location, give your presentation a name, and click "Save."</p>
+
+<h2>17. Briefly discuss about slide transition.</h2>
+
+<p>Slide transitions are visual effects that occur when you move from one slide to the next during a presentation. They add a professional touch and can make a presentation more dynamic and engaging.</p>
+<p>· <strong>Purpose:</strong> The primary purpose is to create a visual break between slides, signaling to the audience a change of topic or idea. They should be used subtly to enhance the flow, not distract from the content.</p>
+<p>· <strong>Applying Transitions:</strong></p>
+<p>  1. Select the slide(s) you want to apply a transition to.</p>
+<p>  2. Go to the <strong>"Transitions"</strong> tab.</p>
+<p>  3. Browse the gallery of transition effects (e.g., Fade, Push, Wipe, Split, Uncover) and click on one to apply it.</p>
+<p>· <strong>Customizing Transitions:</strong></p>
+<p>  · <strong>Effect Options:</strong> Many transitions have options you can change, such as direction (e.g., Wipe From Left, Wipe From Top) or shape.</p>
+<p>  · <strong>Sound:</strong> You can add a sound effect to accompany the transition (use sparingly).</p>
+<p>  · <strong>Duration:</strong> This controls how fast the transition effect plays.</p>
+<p>· <strong>Timing (Advancing Slides):</strong></p>
+<p>  · <strong>On Mouse Click:</strong> The slide advances only when the mouse is clicked. This is the default and gives the presenter full control.</p>
+<p>  · <strong>After:</strong> The slide advances automatically after a set amount of time. This is used for self-running presentations (e.g., kiosks).</p>
+<p>· <strong>Best Practice:</strong> It is often best to use a simple, consistent transition (like "Fade") throughout the entire presentation for a professional look, rather than using many different, flashy effects.</p>
+        <footer>
+            <p>SEC PowerPoint Exam Preparation Guide | Organized by Mark Weightage</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.nav-tab');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+                    
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    
+                    // Hide all question containers
+                    document.querySelectorAll('.questions-container').forEach(container => {
+                        container.classList.remove('active');
+                    });
+                    
+                    // Show the selected question container
+                    const targetId = this.getAttribute('data-target');
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
